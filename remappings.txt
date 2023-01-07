@@ -1,0 +1,3 @@
+@pwnednomore/contracts/=lib/pnm-contracts/
+forge-std/=lib/pnm-contracts/lib/forge-std/src/
+ds-test/=lib/pnm-contracts/lib/forge-std/lib/ds-test/src/
