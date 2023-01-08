@@ -7,24 +7,24 @@ import "@pwnednomore/contracts/templates/UnboundedProfit.sol";
 contract DAOTest is UnboundedProfitTest {
     DAO dao;
 
-    address public USER;
-    address public AGENT;
+    address public user;
+    address public agent;
 
     function deploy() public override {
         dao = new DAO();
     }
 
     function init() public override {
-        USER = makeAddr("USER");
-        deal(USER, 100 * 1e18);
-        dao.deposit{value: USER.balance}(USER);
+        user = makeAddr("USER");
+        deal(user, 100 * 1e18);
+        dao.deposit{value: user.balance}(user);
 
-        AGENT = getAgent();
+        agent = getAgent();
         deal(address(this), 1e16);
         initBalance();
     }
 
     function getBalance() public view override returns (uint256) {
-        return AGENT.balance;
+        return agent.balance;
     }
 }
