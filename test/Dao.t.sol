@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import "src/DAO.sol";
-import "@pwnednomore/contracts/templates/UnboundedProfit.sol";
+import "@pwnednomore/contracts/invariants/UnboundedProfitTest.sol";
 
 contract DAOTest is UnboundedProfitTest {
     DAO dao;
